@@ -1,6 +1,6 @@
 Name:		texlive-magra
 Version:	57373
-Release:	1
+Release:	2
 Summary:	The Magra font face with support for LaTeX and pdfLaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/magra
