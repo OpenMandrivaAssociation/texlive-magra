@@ -3,7 +3,7 @@ Version:	57373
 Release:	2
 Summary:	The Magra font face with support for LaTeX and pdfLaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/magra
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/magra
 License:	ofl lppl
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/magra.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/magra.doc.r%{version}.tar.xz
