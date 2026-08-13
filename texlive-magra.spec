@@ -1,9 +1,10 @@
 %global tl_name magra
 %global tl_revision 78931
+%global tl_version 0.0.1
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	0.0.1
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	The Magra font face with support for LaTeX and pdfLaTeX
 Group:		Publishing
@@ -13,9 +14,17 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/magra.r%{tl_revi
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/magra.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 This package provides the Magra family of fonts designed by FontFuror,
 with support for LaTeX and pdfLaTeX.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from magra:
+Map Magra.map
+TL_DROPIN_EOF
